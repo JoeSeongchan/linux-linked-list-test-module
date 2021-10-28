@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/seongchan-joe/CLionProjects/linked-list-test-module/main.cpp
+linux/kernel.h
+-
+linux/module.h
+-
+linux/init.h
+-
+linux/list.h
+-
+linux/slab.h
+-
+stdlib.h
+-
+time.h
+-
+

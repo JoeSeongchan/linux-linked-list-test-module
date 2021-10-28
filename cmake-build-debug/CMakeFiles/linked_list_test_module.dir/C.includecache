@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/seongchan-joe/CLionProjects/linked-list-test-module/data_structure.h
+macro.h
+/home/seongchan-joe/CLionProjects/linked-list-test-module/macro.h
+
+/home/seongchan-joe/CLionProjects/linked-list-test-module/linked_list_api.h
+macro.h
+/home/seongchan-joe/CLionProjects/linked-list-test-module/macro.h
+data_structure.h
+/home/seongchan-joe/CLionProjects/linked-list-test-module/data_structure.h
+
+/home/seongchan-joe/CLionProjects/linked-list-test-module/macro.h
+
+/home/seongchan-joe/CLionProjects/linked-list-test-module/test.c
+stdlib.h
+-
+time.h
+-
+linked_list_api.h
+/home/seongchan-joe/CLionProjects/linked-list-test-module/linked_list_api.h
+time_calculating.h
+/home/seongchan-joe/CLionProjects/linked-list-test-module/time_calculating.h
+stdio.h
+-
+
+/home/seongchan-joe/CLionProjects/linked-list-test-module/time_calculating.h
+time.h
+-
+stdio.h
+/home/seongchan-joe/CLionProjects/linked-list-test-module/stdio.h
+

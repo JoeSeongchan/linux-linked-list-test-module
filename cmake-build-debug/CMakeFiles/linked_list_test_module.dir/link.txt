@@ -1,0 +1,1 @@
+/usr/lib/ccache/gcc -g CMakeFiles/linked_list_test_module.dir/test.c.o CMakeFiles/linked_list_test_module.dir/linked_list_api.c.o CMakeFiles/linked_list_test_module.dir/time_calculating.c.o CMakeFiles/linked_list_test_module.dir/data_structure.c.o -o linked_list_test_module 
