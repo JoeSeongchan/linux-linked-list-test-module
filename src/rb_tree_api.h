@@ -5,9 +5,11 @@
 #ifndef LINKED_LIST_TEST_MODULE_LINKED_LIST_API_H
 #define LINKED_LIST_TEST_MODULE_LINKED_LIST_API_H
 
-#include "data_structure.h"
+#include "data_node.h"
 
-data_structure *list_search(struct list_head *head, unsigned long long data);
+data_node *node_search(struct rb_root *node, unsigned long long data);
+
+int node_insert(struct rb_root *root, data_node *data);
 
 void list_delete(struct list_head *head, unsigned long long data);
 
