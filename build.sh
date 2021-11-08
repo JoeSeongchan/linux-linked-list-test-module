@@ -1,0 +1,1 @@
+cd ./src && make && insmod test_linked_list.ko && rmmod test_linked_list && dmesg && make clean && dmesg -C

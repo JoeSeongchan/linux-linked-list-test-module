@@ -3,10 +3,11 @@
 //
 #include "linked_list_api.h"
 
-data_structure *list_search(struct list_head *head, unsigned long long data) {
-    data_structure *pos = NULL;
-    data_structure *pos_next = NULL;
-    list_for_each_entry_safe(pos, pos_next, head, head) {
+// function to search node.
+data_node *list_search(struct list_head *sentinel, int data){
+    data_node *pos = NULL;
+    data_node *pos_next = NULL;
+    list_for_each_entry_safe(pos, pos_next, sentinel, head) {
         if (pos->data == data) {
             return pos;
         }
@@ -14,27 +15,40 @@ data_structure *list_search(struct list_head *head, unsigned long long data) {
     return NULL;
 }
 
-void list_delete(struct list_head *head, unsigned long long data) {
-    data_structure *pos = NULL;
-    data_structure *pos_next = NULL;
-    list_for_each_entry_safe(pos, pos_next, head, head) {
+// function to delete node.
+int list_delete(struct list_head *sentinel, int data){
+    data_node *pos = NULL;
+    data_node *pos_next = NULL;
+    list_for_each_entry_safe(pos, pos_next, sentinel, head) {
         if (pos->data == data) {
             list_del(&pos->head);
             kfree(pos);
-            return;
+            return 1;
         }
     }
-    return;
+    return 0;
 }
 
-void list_print_all_items(struct list_head *head) {
-    data_structure *pos = NULL;
-    data_structure *pos_next = NULL;
-    unsigned long long i = 0;
-    list_for_each_entry_safe(pos, pos_next, head, head) {
-        printk("#%llu node data : %llu\n", i, pos->data);
-        i += 1;
+// function to print all node in linked list.
+void list_print_all(struct list_head *sentinel){
+    data_node *pos = NULL;
+    data_node *pos_next = NULL;
+    int i = 0;
+    list_for_each_entry_safe(pos, pos_next, sentinel, head) {
+        log("# %d data : %d",i++,pos->data);
     }
+}
+
+// function to delete all node in linked list.
+void list_delete_all(struct list_head *sentinel){
+    data_node *pos = NULL;
+    data_node *pos_next = NULL;
+    list_for_each_entry_safe(pos, pos_next, sentinel, head)
+    {
+        list_del(&pos->head);
+        kfree(pos);
+    }
+    kfree(sentinel);
 }
 
 
